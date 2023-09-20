@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(135deg, #ce9ffc 10%, #7367f0 100%);
+}
+
+.bg-size-150 {
+  background-size: 100% !important;
+}
+
+@layer components {
+  .brand-button {
+    @apply w-full rounded-md bg-gradient  text-white px-3 py-2 text-lg from-purple-600 to-purple-300 to-10% hover:scale-[1.03] transition-all ease-in-out duration-300;
+  }
+}
+
+label {
+  @apply block mb-2 text-gray-700 text-sm  sm:text-base
+}
+
+input, textarea, select {
+  @apply border-2 border-purple-300 block w-full text-sm sm:text-base px-2 py-1 md:py-2 rounded-md text-gray-700
+}
+
+input:focus, textarea:focus, select {
+  @apply outline-none focus:ring-2 ring-purple-300
+}
